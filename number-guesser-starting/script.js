@@ -25,6 +25,8 @@ function updateScore(winnerString) {
   }
 };
 
+//Project complete
+
 function advanceRound() {
   return currentRoundNumber++
 };
