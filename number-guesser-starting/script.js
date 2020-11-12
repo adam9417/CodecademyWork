@@ -8,9 +8,9 @@ function generateTarget(){
 };
 
 function compareGuesses(humanGuess, computerGuess, secretTarget) {
-  if (Math.abs(humanGuess - secretTarget) < Math.abs(compareGuess - secretTarget)) {
+  if (Math.abs(humanGuess - secretTarget) < Math.abs(computerGuess - secretTarget)) {
     return true;
-  } else if (Math.abs(humanGuess - secretTarget) === Math.abs(compareGuess - secretTarget)) {
+  } else if (Math.abs(humanGuess - secretTarget) === Math.abs(computerGuess - secretTarget)) {
     return true;
   } else {
     return false;
@@ -21,6 +21,10 @@ function updateScore(winnerString) {
   if (winnerString === 'human') {
     humanScore++;
   } else {
-    computerScore++
+    computerScore++;
   }
+};
+
+function advanceRound() {
+  return currentRoundNumber++
 };
