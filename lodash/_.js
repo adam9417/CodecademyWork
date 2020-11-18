@@ -15,7 +15,10 @@ const _ = {
       start = temp;
     };
     const isInRange = start <= number && number < end;
-    return isInRange; 
+    return isInRange;
+  },
+  words(string){
+    return string.split(' '); 
   },
 
 //end of const _
