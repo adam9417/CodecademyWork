@@ -18,11 +18,7 @@ function compareGuesses(humanGuess, computerGuess, secretTarget) {
 };
 
 function updateScore(winnerString) {
-  if (winnerString === 'human') {
-    humanScore++;
-  } else {
-    computerScore++;
-  }
+  return winnerString === 'human' ? humanScore++ : computerScore++;
 };
 
 //Project complete
