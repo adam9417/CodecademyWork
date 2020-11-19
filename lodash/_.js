@@ -71,12 +71,11 @@ const _ = {
     }
     let arrayChunks = [];
     for (i = 0; i < array.length; i += size) {
-      let arrayChunk = array.slice(i, size);
+      let arrayChunk = array.slice(i, i + size);
       arrayChunks.push(arrayChunk);
     };
     return arrayChunks
   }
-//end of const _
 };
 
 // Do not write or modify code below this line.
