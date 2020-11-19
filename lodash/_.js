@@ -51,6 +51,12 @@ const _ = {
     };
     return undefined;
   },
+  drop(array, number) {
+    if (number === undefined){
+      return array.slice(1);
+    }
+    return array.slice(number);
+  },
 //end of const _
 };
 
