@@ -17,10 +17,10 @@ const _ = {
     const isInRange = start <= number && number < end;
     return isInRange;
   },
-  words(string){
+  words(string) {
     return string.split(' ');
   },
-  pad(string, length){
+  pad(string, length) {
     if (length <= string.length){
       return string;
     }
@@ -28,6 +28,10 @@ const _ = {
     const endPaddingLength = length - string.length - startPaddingLength;
     const paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
     return paddedString;
+  },
+  has(object, key) {
+    const hasValue = object[key] !== undefined
+    return hasValue;
   },
 
 //end of const _
