@@ -44,6 +44,34 @@ function validateCred(array){
   }
 };
 
+function findInvalidCards(nestedArray) {
+  let invalidCards = [];
+  for (if i = 0; i < nestedArray.length; i++) {
+    if (validateCred(nestedArray[i]) === false) {
+      invalidCards.push(nestedArray[i]);
+    }
+  }
+  return invalidCards;
+};
+
+function idInvalidCardCompanies(nestedArray){
+  let invalidCardCompanies = [];
+  for (let i = 0; i < nestedArray.length; i++){
+    let current = nestedArray[i];
+    if (current[0] === 3) {
+      invalidCardCompanies.push(`Amex (American Express)`);
+    } else if (current[0] === 4) {
+      invalidCardCompanies.push(`Visa`);
+    } else if (current[0] === 5) {
+      invalidCardCompanies.push(`Mastercard`);
+    } else if (current[0] === 6) {
+      invalidCardCompanies.push(`Discover`);
+    }
+  }
+  return invalidCardCompanies; 
+}
+
+
 
 
 
