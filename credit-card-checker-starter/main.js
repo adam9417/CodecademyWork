@@ -29,11 +29,11 @@ function validateCred(array){
   for (i = array.length - 1; i >=0; i-=2) {
     sum += array[i];
   }
-  for (i = array.length - 2; i >=0; i-=2) {
-    let doubled = array[i] * 2;
+  for (j = array.length - 2; j >=0; j-=2) {
+    let current = array[j];
+    let doubled = current * 2;
     if (doubled > 9) {
-      doubled = doubled - 9;
-      doubled += sum;
+      sum -= 9;
     }
     doubled += sum;
   }
